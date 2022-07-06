@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282a33;
+  z-index: 1;
+}
+.logo {
+  padding: 20px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 10px;
+}
+a:hover {
+  color: rgb(46, 182, 236);
+}
+li {
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.weather-card {
+  height: 64vh;
+  background: linear-gradient(
+      to right bottom,
+      hsla(0, 0%, 0%, 0.7),
+      hsla(0, 0%, 0%, 0.7)
+    ),
+    url("t3.jpg");
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-card {
+  margin-top: 10rem;
+}
+.card {
+  background-color: #323546;
+  width: 250px;
+  height: 350px;
+  border-radius: 20px;
+  color: rgb(46, 182, 236);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h4 {
+  text-transform: capitalize;
+}
+.today-h4 {
+  font-size: 2rem;
+}
+.weekly {
+  background-color: #282a33;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+.weather-grid {
+  height: 100%;
+  background-color: #282a33;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.grid-card {
+  background-color: #323546;
+  width: 250px;
+  height: 350px;
+  color: rgb(46, 182, 236);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  border: 2px solid #000;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+  margin-bottom: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.grid-card:hover {
+  background-color: #282a33;
+}
+.grid-card:first-child {
+  border-left: 4px solid #000;
+}
+.grid-card:last-child {
+  border-right: 4px solid #000;
+}
+.container {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2f3446;
+}
+.get-weather {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  background-color: #2f3446;
+}
+.city-form {
+  height: 50px;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  background-color: #282a33;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 70px;
+  transition: 1s;
+}
+.city-form input {
+  background-color: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 20px;
+  color: white;
+}
+.city-form:focus-within {
+  transform: scale(110%);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.city-form button i {
+  width: 25px;
+}
+.city-form button {
+  border: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.country {
+  height: 100%;
+  background-color: #2f3446;
+  display: flex;
+
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.country-today {
+  height: 64vh;
+  background: #13151d;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.country-card {
+  margin-top: 0;
+  background-color: #2f3446;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 400px;
+  height: 400px;
+  color: rgb(46, 182, 236);
+  border-radius: 20px;
+  transition: 1s ease;
+}
+.country-card:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.bottom-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+}
+.country-card h1 {
+  font-size: 3rem;
+}
+.country-card h2 {
+  font-size: 2.5rem;
+}
+.bottom-box h3 {
+  font-size: 2rem;
+}
+.card-card {
+  margin-top: 4rem;
+}
+.fa-spinner {
+  color: white;
+  font-size: 3rem;
+  animation-name: rotateSpinner;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: #13151d;
+}
+
+.footer-h1 {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes rotateSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-height: 850px) {
+  .card-card {
+    margin-top: 5rem;
+    height: 40vh;
+  }
+}
